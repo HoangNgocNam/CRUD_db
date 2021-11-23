@@ -1,0 +1,25 @@
+Bước 1: tao 1 project trong forder htdoc -> localhosh/tên/ index.php
+Bước 2: kết nối với cơ sở dữ liệu.(database).MySQL
+        - https://www.hostinger.vn/huong-dan/lam-the-nao-de-ket-noi-php-voi-mysql-database
+        - lấy code copy vào file: index
+        - tao cơ sở dữ liệu.
+bước 3: tạo bảng:
+        - đặt tên bảng + tạo số ô dữ liệu
+        - id chọn int / tich A I
+        - email,name,... chọn varchar
+        - chon ghi lai.
+
+Bước 4: tạo recod
+        - chọn chèn
+        - điền thông tin vào các ô
+        - thưc hiện
+        - chọn duyêt
+
+Bước 5: lấy thông tin từ database
+        $sql = "select * from account";
+        $result = $conn->query($sql);
+
+        $accounts = $result->fetch_all(MYSQLI_ASSOC);
+         -var_dump($row); kiểm tra xem đã lấy thông tin được chưa.
+
+Bước 6: tạo list để chứa thông tin
